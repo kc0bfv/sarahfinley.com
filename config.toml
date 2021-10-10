@@ -3,8 +3,10 @@ languageCode = "en-us"
 title = "Sarah Finley - Licensed Massage Therapist"
 theme = "hugo-creative-theme"
 googleAnalytics = ""
+disableKinds = [ "taxonomy", "taxonomyTerm" ]
 
 [params]
+    #show_portfolio_text_always = true
 
 	# You can use Markdown syntax for urls [text](//url.to/source) for
 	# most longer texts.
@@ -21,7 +23,7 @@ googleAnalytics = ""
 	# To provide some metadata for search engines feel free to add some
 	# information about you and your website.
 	name = "Sarah Finley - Licensed Massage Therapist"
-	description = "Sarah Finley is a licensed massage therapist in the Idaho Falls, Idaho area.  Let her put her experience to work for you and your back, legs, feed, and neck."
+	description = "Sarah Finley is a licensed massage therapist in the Idaho Falls, Idaho area.  Let her put her experience to work for you and your back, legs, feet, and neck."
 
 	# The path must be relative to the static folder
 	favicon = "favicon.png"
@@ -81,12 +83,16 @@ googleAnalytics = ""
             description = "Support your mental and physical well-being"
 
 
-    # Portfolio modals
-	[params.portfolio.modal]
-        client = "Client"
-        date = "Date"
-        category = "Category"
-        buttonText = "Close"
+    # Portfolio section
+    [params.portfolio]
+        show_text_always = true
+
+        # Portfolio modals
+        [params.portfolio.modal]
+            client = "Client"
+            date = "Date"
+            category = "Category"
+            buttonText = "Close"
 
     # Aside section
 	#[params.aside]

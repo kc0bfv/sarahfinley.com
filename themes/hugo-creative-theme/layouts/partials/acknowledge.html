@@ -1,0 +1,20 @@
+{{ "<!-- ACKNOWLEDGE -->" | safeHTML }}
+<footer id="acknowledge">
+    <div class="container">
+        {{ with .Site.Params.acknowledgements.headline }}
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h4 class="section-heading">{{ . }}</h4>
+                <hr class="primary">
+            </div>
+        </div>
+        {{ end }}
+        <div class="row">
+            {{ range .Site.Params.acknowledgements.list }}
+            <div class="col-lg-4 col-md-6 text-center">
+                <a class="text-muted" href="{{ .link }}">{{ .text }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</footer>
